@@ -2,12 +2,14 @@ const regions = {
 	"au": {
 		address1: "Ground Floor, 153 Flinders Street,",
 		address2: "Adelaide, SA 5000",
-		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png"
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png",
+		banner_link: "https://splose.com/100k-kickstart-giveaway?utm_source=email&utm_medium=staff_signature&utm_campaign=kick-start-promo&utm_content=signature_banner_au"
 	},
 	"uk": {
 		address1: "WeWork, 71-91 Aldwych House",
 		address2: "London WC2B 4HN",
-		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png"
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png",
+		banner_link: "https://splose.com/100k-kickstart-giveaway?utm_source=email&utm_medium=staff_signature&utm_campaign=kick-start-promo&utm_content=signature_banner_uk"
 	}
 }
 
@@ -87,12 +89,21 @@ document.addEventListener("DOMContentLoaded", function() {
 			// - Replace the banner with the banner for the region (if banner is set)
 			if (fieldValues["include_banner"] == "1") {
 				if (regions[fieldValues["site"].toLowerCase()].banner) {
-					const bannerTemplate = document.querySelector("[data-signature-templates] > .banner");
+					const bannerTemplate = document.querySelector("[data-signature-templates] > .banner-template");
 					const bannerEl = signatureOutput.querySelector("[data-banner]");
 					if(bannerEl != null) {
-						const bannerUrl = regions[fieldValues["site"].toLowerCase()].banner;
-						const bannerHTML = bannerTemplate.innerHTML.replace(new RegExp("{{banner}}", "g"), bannerUrl);
-						bannerEl.innerHTML = bannerHTML;
+						let bannerLink = "https://splose.com?utm_source=email&utm_medium=staff_signature&utm_content=signature_banner";
+						// update the banner URL with config
+						if (regions[fieldValues["site"].toLowerCase()].banner_link) {
+							bannerLink = regions[fieldValues["site"].toLowerCase()].banner_link;
+						}
+						const bannerSrc = regions[fieldValues["site"].toLowerCase()].banner;
+
+						let bannerHtml = bannerTemplate.innerHTML;
+						bannerHtml = bannerHtml.replace(new RegExp("{{bannerSrc}}", "g"), bannerSrc);
+						bannerHtml = bannerHtml.replace(new RegExp("{{bannerLink}}", "g"), bannerLink);
+						
+						bannerEl.innerHTML = bannerHtml;
 					}
 				}
 			}
