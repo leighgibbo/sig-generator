@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				addressEl.innerHTML = regionData.address1 + "<br>" + regionData.address2;
 			}
 			// - Replace the banner with the banner for the region (if banner is set)
-			if (fieldValues["show_banner"] == "1") {
+			if (fieldValues["include_banner"] == "1") {
 				if (regions[fieldValues["site"].toLowerCase()].banner) {
 					const bannerTemplate = document.querySelector("[data-signature-templates] > .banner");
 					const bannerEl = signatureOutput.querySelector("[data-banner]");
