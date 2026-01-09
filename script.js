@@ -2,12 +2,12 @@ const regions = {
 	"au": {
 		address1: "Ground Floor, 153 Flinders Street,",
 		address2: "Adelaide, SA 5000",
-		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/spark_banner.png"
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png"
 	},
 	"uk": {
 		address1: "WeWork, 71-91 Aldwych House",
 		address2: "London WC2B 4HN",
-		banner: false
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png"
 	}
 }
 
