@@ -17,6 +17,8 @@ const generatePhoneLink = (mobile, region) => {
 	// if mobile starts with 04 or 07, remove the 0
 	if (mobile.startsWith("04") || mobile.startsWith("07")) {
 		formattedMobile = formattedMobile.substring(1);
+	} else {
+		return "tel:" + mobile;
 	}
 	switch(region.toLowerCase()) {
 		case "au":
