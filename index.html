@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Email Signature Generator</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="signature-generator">
+		<form id="signatureGenerator" class="signature-generator-form" autocomplete="off">
+			<div class="intro">
+				<h1>Email Signature Generator</h1>
+				<p>Fill in the form below, and click "Generate" to generate your email signature.</p>
+				<p>Click "Copy" to copy the signature to your clipboard.</p>
+			</div>
+			<div class="fields">
+				<label class="field-wrapper">
+					<div class="label">Name *</div>
+					<input type="text" name="name" value="" autofocus required>
+				</label>
+				<label class="field-wrapper">
+					<div class="label">Title *</div>
+					<input type="text" name="title" value="" required>
+				</label>
+				<label class="field-wrapper">
+					<div class="label">Mobile (syntax: 0400 000 000)</div>
+					<input type="text" name="mobile" value="">
+				</label>
+				<label class="field-wrapper">
+					<div class="label">Site *</div>
+					<select name="site" required>
+						<option value="au" selected>AU</option>
+						<option value="uk">UK</option>
+					</select>
+				</label>
+				<label class="field-wrapper">
+					<div class="label">Show Banner?</div>
+					<label class="toggle-switch">
+						<input type="checkbox" name="show_banner" value="1" checked>
+						<span class="slider"></span>
+					</label>
+				</label>
+				<div class="field-wrapper buttons-wrapper">
+					<button data-submit-button type="submit" class="button">Generate</button>
+					<button data-copy-button type="button" class="button js-copy" style="opacity: 0;">Copy</button>
+				</div>
+			</div>
+		</form>
+
+		<div class="signature-output" style="display: none;">
+			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="280"
+				style="width: 280px; font-family: Arial, sans-serif; font-size: 13px; mso-line-height-rule: exactly; line-height: 18px; vertical-align: top; color: #216947; font-feature-set: kern, liga, pnum; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding-bottom: 9px;">
+						<strong>{{name}}</strong><br>
+						{{title}}
+					</td>
+				</tr>
+
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<a href="{{telLink}}" style="color: #216947; text-decoration: none;"><span
+								style="color: #216947; text-decoration: none;">
+								<font style="color: #216947; text-decoration: none;">{{mobile}}</font>
+							</span></a><br> <a href="https://splose.com/"
+							style="color: #216947; text-decoration: none;"><span
+								style="color: #216947; text-decoration: none;">
+								<font style="color:rgb(115, 127, 121); text-decoration: none;">splose.com</font>
+							</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td
+						style="font-family: Arial, sans-serif; line-height: 100%; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<img src="https://secure.simple.com.au/clients/splose/logo.png" width="152" height="auto"
+							style="width: 152px; height: auto; border: 0; outline: none; text-decoration: none;">
+					</td>
+				</tr>
+
+				<tr>
+					<td data-address style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<a href="https://linkedin.com/company/splose"
+							style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">LinkedIn</font>
+							</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://facebook.com/splose" style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">Facebook</font>
+							</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://instagram.com/splose" style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">Instagram</font>
+							</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td
+						style="font-family: Arial, sans-serif; padding-top: 9px; padding-bottom: 9px; border-top: 1px solid #F0E9FF;">
+						<strong>splose.</strong> Practice management, handled.
+					</td>
+				</tr>
+				<tr>
+					<td
+						style="font-family: Arial, sans-serif; line-height: 100%; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<!-- Banner gets injected here as needed -->
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div style="display: none;" data-signature-templates>
+
+		<!-- Signature Template -->
+		<div class="signature-template">
+			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="280"
+				style="width: 280px; font-family: Arial, sans-serif; font-size: 13px; mso-line-height-rule: exactly; line-height: 18px; vertical-align: top; color: #216947; font-feature-set: kern, liga, pnum; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding-bottom: 9px;">
+						<strong>{{name}}</strong><br>
+						{{title}}
+					</td>
+				</tr>
+
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<a href="{{telLink}}" style="color: #216947; text-decoration: none;"><span
+								style="color: #216947; text-decoration: none;">
+								<font style="color: #216947; text-decoration: none;">{{mobile}}</font>
+							</span></a><br> <a href="https://splose.com/"
+							style="color: #216947; text-decoration: none;"><span
+								style="color: #216947; text-decoration: none;">
+								<font style="color:rgb(115, 127, 121); text-decoration: none;">splose.com</font>
+							</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td
+						style="font-family: Arial, sans-serif; line-height: 100%; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<img src="https://secure.simple.com.au/clients/splose/logo.png" width="152" height="auto"
+							style="width: 152px; height: auto; border: 0; outline: none; text-decoration: none;">
+					</td>
+				</tr>
+
+				<tr>
+					<td data-address style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">&nbsp;</td>
+				</tr>
+
+				<tr>
+					<td style="font-family: Arial, sans-serif; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<a href="https://linkedin.com/company/splose"
+							style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">LinkedIn</font>
+							</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://facebook.com/splose" style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">Facebook</font>
+							</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://instagram.com/splose" style="color: #216947; text-decoration: underline;"><span
+								style="color: #216947; text-decoration: underline;">
+								<font style="color: #216947; text-decoration: underline;">Instagram</font>
+							</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td
+						style="font-family: Arial, sans-serif; padding-top: 9px; padding-bottom: 9px; border-top: 1px solid #F0E9FF;">
+						<strong>splose.</strong> Practice management, handled.
+					</td>
+				</tr>
+				<tr>
+					<td
+						data-banner
+						style="font-family: Arial, sans-serif; line-height: 100%; padding: 9px 0; border-top: 1px solid #F0E9FF;">
+						<!-- Banner gets injected here as needed -->
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- Banner Template -->
+		<a class="banner" href="https://splose.com/" style="color: #216947; text-decoration: underline;"><span style="color: #216947; text-decoration: underline;">
+				<img
+					src="{{banner}}" width="300"
+					height="auto"
+					style="width: 300px; height: auto; border: 0; outline: none; text-decoration: none;" />
+			</span></a>
+	</div>
+</body>
+
+</html>

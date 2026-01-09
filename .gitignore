@@ -1,0 +1,4 @@
+# Misc gitignore
+
+/vendor
+.DS_Store
