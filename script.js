@@ -2,14 +2,14 @@ const regions = {
 	"au": {
 		address1: "Ground Floor, 153 Flinders Street,",
 		address2: "Adelaide, SA 5000",
-		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png",
-		banner_link: "https://splose.com/100k-kickstart-giveaway?utm_source=email&utm_medium=staff_signature&utm_campaign=kick-start-promo&utm_content=signature_banner_au"
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/email_signature_fitzy_450x200px_optimised.png",
+		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_content=signature_banner_au"
 	},
 	"uk": {
 		address1: "WeWork, 71-91 Aldwych House",
 		address2: "London WC2B 4HN",
-		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/100k_giveaway_2026_banner.png",
-		banner_link: "https://splose.com/100k-kickstart-giveaway?utm_source=email&utm_medium=staff_signature&utm_campaign=kick-start-promo&utm_content=signature_banner_uk"
+		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/email_signature_fitzy_450x200px_optimised.png",
+		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_content=signature_banner_uk"
 	}
 }
 
