@@ -3,13 +3,13 @@ const regions = {
 		address1: "Ground Floor, 153 Flinders Street,",
 		address2: "Adelaide, SA 5000",
 		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/email_signature_fitzy_450x200px_optimised.png",
-		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_content=signature_banner_au"
+		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_campaign=staff_signature&utm_content=signature_banner_au"
 	},
 	"uk": {
 		address1: "WeWork, 71-91 Aldwych House",
 		address2: "London WC2B 4HN",
 		banner: "https://cdn.craft.cloud/97df3833-063d-4b7a-b1fe-2cc2f1603c1c/assets/images/Email-Signatures/email_signature_fitzy_450x200px_optimised.png",
-		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_content=signature_banner_uk"
+		banner_link: "https://splose.com/?utm_source=email&utm_medium=staff_signature&utm_campaign=staff_signature&utm_content=signature_banner_uk"
 	}
 }
 
